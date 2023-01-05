@@ -23,7 +23,7 @@
 */
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
 }
 /*
   Typographic tweaks!
@@ -119,8 +119,10 @@ body {
 
 .store_card_text {
   padding: 3rem 2.5rem;
-  display: grid;
-  gap: 2rem;
+}
+
+.store_card_text > * {
+  margin-bottom: 2rem;
 }
 
 /* Logo */
@@ -177,11 +179,11 @@ button {
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button:active {
-    opacity: 70%;
+  opacity: 70%;
 }
 
 .arrow {
@@ -196,4 +198,14 @@ button:active {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media Query */
+
+@media screen and (min-width:40em) {
+    .store_card {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
 }
