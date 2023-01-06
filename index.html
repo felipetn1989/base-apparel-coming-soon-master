@@ -19,20 +19,27 @@
   <body>
     <main class="store_card">
       <img class="logo_image grid-group" src="images/logo.svg" alt="Base Apparel Logo" />
-      <img
-        class="hero_mobile"
-        src="images/hero-mobile.jpg"
-        alt="Photo of a girl wearing an orange shirt with her hand next to her face"
-      />
+      <picture>
+        <source media="(min-width:62em)" srcset="images/hero-desktop.jpg">
+        <img
+          class="hero"
+          src="images/hero-mobile.jpg"
+          alt="Photo of a girl wearing an orange shirt with her hand next to her face"
+        />
+      </picture>
 
-      <div class="store_card_text grid-group">
+      <!-- <div class="hero">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi quaerat quia animi aliquid impedit, velit atque commodi odio tempora at nihil ullam numquam id quod itaque dolor voluptate vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ad consequuntur beatae consectetur itaque quam error quidem ipsum consequatur, illo deserunt, aspernatur adipisci quasi officia animi quos hic maiores officiis!</p>
+      </div> -->
+
+      <!-- <div class="store_card_text grid-group"> -->
         <h1>
           We're <br /><span class="dark"
             >coming <br />
             soon</span
           >
         </h1>
-        <p>
+        <p class="description">
           Hello fellow shoppers! We're currently building our new fashion store.
           Add your email below to stay up-to-date with announcements and our
           launch deals.
@@ -52,8 +59,8 @@
             />
           </button>
         </form>
-      </div>
-      <div class="hero_desktop grid-group"></div>
+      <!-- </div> -->
+      <!-- <div class="hero_desktop grid-group"></div> -->
     </main>
 
     <footer>

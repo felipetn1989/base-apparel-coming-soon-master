@@ -37,14 +37,14 @@ body {
 /*
   6. Improve media defaults
 */
-img,
+/* img,
 picture,
 video,
 canvas,
 svg {
   display: block;
   width: 100%;
-}
+} */
 /*
   7. Remove built-in form typography styles
 */
@@ -118,14 +118,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3rem;
 }
 
 .store_card_text {
   padding: 3rem 2.5rem;
 }
 
-.store_card_text > * {
+.hero,
+h1,
+.description {
   margin-bottom: 2rem;
+}
+
+h1,
+.description,
+form {
+  padding: 0 2rem;
 }
 
 /* Logo */
@@ -137,7 +146,7 @@ body {
 
 /* */
 
-.store_card_text > h1,
+.store_card > h1,
 .dark {
   text-transform: uppercase;
   font-size: 2.25rem;
@@ -146,7 +155,7 @@ body {
   font-weight: var(--fw-light);
 }
 
-.store_card_text > p {
+.store_card > p {
   font-size: 0.875rem;
   font-weight: var(--fw-regular);
 }
@@ -177,6 +186,7 @@ button {
   height: 2.75rem;
   width: 3.5rem;
   border-radius: 2rem;
+  margin-right: 2rem;
   position: absolute;
   right: 0;
 }
@@ -210,14 +220,10 @@ button:active {
     justify-content: center;
   }
 
-  .hero_mobile {
-    display: none;
-  }
-
-  .hero_desktop {
+  /* .hero_desktop {
     background: url("../images/hero-desktop.jpg") no-repeat center top;
     background-size: contain;
-  }
+  } */
 
   .logo_image {
     grid-area: one;
@@ -225,10 +231,22 @@ button:active {
     padding: 2rem;
   }
 
-  .store_card_text {
+  .hero {
     grid-area: two;
-    text-align: left;
-    padding: 2rem;
+    background-color: red;
+    height: 100%;
+  }
+
+  .store_card > h1 {
+    grid-area: three;
+  }
+
+  .description {
+    grid-area: four;
+  }
+
+  form {
+    grid-area: five;
   }
 
   .store_card_text > h1,
@@ -239,17 +257,17 @@ button:active {
   .store_card_text > p {
     font-size: 0.9375rem;
   }
-  .hero_desktop {
-    grid-area: three;
-  }
 
   .store_card {
     display: grid;
     grid-template-areas:
-      "one three"
-      "two three";
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    "one two"
+    "three two"
+    "four two"
+    "five two";
+    /* grid-template-columns: 1fr 1fr; */
+    /* grid-template-rows: 0.1fr 1fr; */
+    /* gap: 6rem; */
     width: 70vw;
   }
 
