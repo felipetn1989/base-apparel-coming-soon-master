@@ -11,8 +11,8 @@ function validate(email) {
   }
 }
 
-function button(a) {
-  a.preventDefault();
+function button(x) {
+  x.preventDefault();
 
   if (ifmail.value.length == 0 || validate(ifmail) == false) {
     ifmail.style.borderColor = "var(--Soft-Red)";
