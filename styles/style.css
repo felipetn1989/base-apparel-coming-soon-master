@@ -115,6 +115,9 @@ body {
   color: var(--Desaturated-Red);
   font-weight: var(--fw-light);
   background-image: linear-gradient(135deg, var(--from1), var(--to1));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .store_card_text {
@@ -202,10 +205,71 @@ button:active {
 
 /* Media Query */
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 62em) {
+  body {
+    justify-content: center;
+  }
+
+  .hero_mobile {
+    display: none;
+  }
+
+  .hero_desktop {
+    background: url("../images/hero-desktop.jpg") no-repeat center top;
+    background-size: contain;
+  }
+
+  .logo_image {
+    grid-area: one;
+    width: 13rem;
+    padding: 2rem;
+  }
+
+  .store_card_text {
+    grid-area: two;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  .store_card_text > h1,
+  .dark {
+    font-size: 3.5rem;
+  }
+
+  .store_card_text > p {
+    font-size: 0.9375rem;
+  }
+  .hero_desktop {
+    grid-area: three;
+  }
+
   .store_card {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    display: grid;
+    grid-template-areas:
+      "one three"
+      "two three";
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    width: 70vw;
+  }
+
+  #ifmail,
+  button {
+    height: 3.25rem;
+  }
+
+  button {
+    width: 5rem;
+  }
+
+  .attribution {
+    margin-top: 3rem;
+  }
+
+  @media screen and (min-width: 1000rem) {
+    .hero_desktop {
+      background: url("../images/hero-desktop.jpg") no-repeat center;
+      background-size: contain;
+    }
   }
 }
