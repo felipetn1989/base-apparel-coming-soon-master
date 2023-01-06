@@ -202,10 +202,10 @@ button:active {
 
 /* Media Query */
 
-@media screen and (min-width:40em) {
-    .store_card {
-        display: flex;
-        flex-direction: row-reverse;
-
-    }
+@media screen and (min-width: 40em) {
+  .store_card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
