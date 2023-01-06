@@ -18,21 +18,19 @@
   </head>
   <body>
     <main class="store_card">
-      <img class="logo_image grid-group" src="images/logo.svg" alt="Base Apparel Logo" />
-      <picture>
-        <source media="(min-width:62em)" srcset="images/hero-desktop.jpg">
-        <img
-          class="hero"
-          src="images/hero-mobile.jpg"
-          alt="Photo of a girl wearing an orange shirt with her hand next to her face"
-        />
-      </picture>
+      <img
+        class="logo_image grid-group"
+        src="images/logo.svg"
+        alt="Base Apparel Logo"
+      />
 
-      <!-- <div class="hero">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sequi quaerat quia animi aliquid impedit, velit atque commodi odio tempora at nihil ullam numquam id quod itaque dolor voluptate vitae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ad consequuntur beatae consectetur itaque quam error quidem ipsum consequatur, illo deserunt, aspernatur adipisci quasi officia animi quos hic maiores officiis!</p>
-      </div> -->
+      <img
+        class="hero_mobile"
+        src="images/hero-mobile.jpg"
+        alt="Photo of a girl wearing an orange shirt with her hand next to her face"
+      />
 
-      <!-- <div class="store_card_text grid-group"> -->
+      <div class="store_card_text grid-group">
         <h1>
           We're <br /><span class="dark"
             >coming <br />
@@ -45,22 +43,28 @@
           launch deals.
         </p>
         <form action="#">
+          <img id="error" src="images/icon-error.svg" alt="Error icon">
           <input
-            type="email"
+            type="text"
             name="fmail"
             id="ifmail"
             placeholder="Email Address"
           />
-          <button>
+          <button id="submit" onclick="button()">
             <img
               class="arrow"
               src="images/icon-arrow.svg"
               alt="Button with an arrow icon"
             />
           </button>
+          <p id="error_msg">Please provide a valid e-mail</p>
         </form>
-      <!-- </div> -->
-      <!-- <div class="hero_desktop grid-group"></div> -->
+      </div>
+      <img
+        src="images/hero-desktop.jpg"
+        alt="Photo of a girl wearing an orange shirt with her hand next to her face"
+        class="hero_desktop"
+      />
     </main>
 
     <footer>
@@ -75,4 +79,5 @@
       </p>
     </footer>
   </body>
+  <script src="scripts/script.js"></script>
 </html>

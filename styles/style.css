@@ -37,14 +37,14 @@ body {
 /*
   6. Improve media defaults
 */
-/* img,
+img,
 picture,
 video,
 canvas,
 svg {
   display: block;
   width: 100%;
-} */
+}
 /*
   7. Remove built-in form typography styles
 */
@@ -123,18 +123,8 @@ body {
 
 .store_card_text {
   padding: 3rem 2.5rem;
-}
-
-.hero,
-h1,
-.description {
-  margin-bottom: 2rem;
-}
-
-h1,
-.description,
-form {
-  padding: 0 2rem;
+  display: grid;
+  gap: 3rem;
 }
 
 /* Logo */
@@ -146,7 +136,11 @@ form {
 
 /* */
 
-.store_card > h1,
+.hero_desktop {
+  display: none;
+}
+
+.store_card_text > h1,
 .dark {
   text-transform: uppercase;
   font-size: 2.25rem;
@@ -155,7 +149,7 @@ form {
   font-weight: var(--fw-light);
 }
 
-.store_card > p {
+.store_card_text > p {
   font-size: 0.875rem;
   font-weight: var(--fw-regular);
 }
@@ -167,6 +161,7 @@ form {
 
 form {
   position: relative;
+  height: fit-content;
 }
 
 #ifmail {
@@ -178,6 +173,7 @@ form {
   font-size: 0.875rem;
   padding-left: 1.25rem;
   background-color: transparent;
+  position: relative;
 }
 
 button {
@@ -186,9 +182,9 @@ button {
   height: 2.75rem;
   width: 3.5rem;
   border-radius: 2rem;
-  margin-right: 2rem;
   position: absolute;
   right: 0;
+  top: 0;
 }
 
 button:hover {
@@ -199,10 +195,30 @@ button:active {
   opacity: 70%;
 }
 
+#ifmail:focus {
+  outline: none;
+}
+
 .arrow {
   margin: auto;
   height: 1rem;
   width: 1rem;
+}
+
+#error {
+  width: 1.25rem;
+  position: absolute;
+  top: 17%;
+  right: 25%;
+  display: none;
+}
+
+#error_msg {
+  color: var(--Soft-Red);
+  text-align: left;
+  margin-left: 1.25rem;
+  margin-top: 0.5rem;
+  display: none;
 }
 
 .attribution {
@@ -215,15 +231,29 @@ button:active {
 
 /* Media Query */
 
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 60em) {
   body {
     justify-content: center;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  /* .hero_desktop {
-    background: url("../images/hero-desktop.jpg") no-repeat center top;
-    background-size: contain;
-  } */
+  .store_card {
+    display: grid;
+    grid-template-areas:
+      "one three"
+      "two three";
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    row-gap: 1rem;
+    max-width: 60rem;
+    place-content: center;
+  }
+
+  .hero_mobile {
+    display: none;
+  }
 
   .logo_image {
     grid-area: one;
@@ -231,22 +261,16 @@ button:active {
     padding: 2rem;
   }
 
-  .hero {
+  .store_card_text {
+    text-align: left;
     grid-area: two;
-    background-color: red;
-    height: 100%;
   }
 
-  .store_card > h1 {
+  .hero_desktop {
+    display: block;
     grid-area: three;
-  }
-
-  .description {
-    grid-area: four;
-  }
-
-  form {
-    grid-area: five;
+    min-width: 30rem;
+    min-height: 40rem;
   }
 
   .store_card_text > h1,
@@ -258,17 +282,12 @@ button:active {
     font-size: 0.9375rem;
   }
 
-  .store_card {
-    display: grid;
-    grid-template-areas:
-    "one two"
-    "three two"
-    "four two"
-    "five two";
-    /* grid-template-columns: 1fr 1fr; */
-    /* grid-template-rows: 0.1fr 1fr; */
-    /* gap: 6rem; */
-    width: 70vw;
+  #error {
+    right: 6rem;
+  }
+
+  #ifmail {
+    width: 100%;
   }
 
   #ifmail,
@@ -279,15 +298,10 @@ button:active {
   button {
     width: 5rem;
   }
+}
 
-  .attribution {
-    margin-top: 3rem;
-  }
-
-  @media screen and (min-width: 1000rem) {
-    .hero_desktop {
-      background: url("../images/hero-desktop.jpg") no-repeat center;
-      background-size: contain;
-    }
+@media screen and (min-width: 100em) {
+  #error {
+    right: 30%;
   }
 }
