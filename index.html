@@ -25,7 +25,7 @@
       />
 
       <picture class="hero">
-        <source media="(min-width:60em)" srcset="images/hero-desktop.jpg">
+        <source media="(min-width:70em)" srcset="images/hero-desktop.jpg" />
         <img
           src="images/hero-mobile.jpg"
           alt="Photo of a girl wearing an orange shirt with her hand next to her face"
@@ -45,11 +45,12 @@
           launch deals.
         </p>
         <form action="#">
-          <img id="error" src="images/icon-error.svg" alt="Error icon">
+          <img id="error" class="error_icon" src="images/icon-error.svg" alt="Error icon" />
           <input
             type="email"
             name="fmail"
             id="ifmail"
+            class="mail_form"
             placeholder="Email Address"
           />
           <button id="submit">
@@ -59,7 +60,7 @@
               alt="Button with an arrow icon"
             />
           </button>
-          <p id="error_msg">Please provide a valid e-mail</p>
+          <p id="errorMsg" class="error_message">Please provide a valid e-mail</p>
         </form>
       </div>
     </main>
