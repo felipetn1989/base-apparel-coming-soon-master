@@ -243,22 +243,25 @@ button:active {
     grid-template-areas:
       "one three"
       "two three";
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    row-gap: 1rem;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 2.6fr;
+    gap: 3rem;
+    row-gap: 0rem;
     place-content: center;
   }
 
   .logo_image {
     grid-area: one;
-    width: 13rem;
-    padding: 2rem;
+    width: 13.5rem;
+    padding-top: 4rem;
+    margin-left: 8.4375rem;
   }
 
   .store_card_text {
-    text-align: left;
     grid-area: two;
-
+    place-self: start center;    
+    text-align: left;
+    padding: 0rem 10.5rem;
   }
 
   .hero {
@@ -267,11 +270,15 @@ button:active {
 
   .store_card_text > h1,
   .dark {
-    font-size: 3.5rem;
+    font-size: 3.625rem;
+    letter-spacing: 1.3125rem;
+    line-height: 3.75rem;
   }
 
   .store_card_text > p {
     font-size: 0.9375rem;
+    margin-top: 1rem;
+    line-height: 1.75rem;
   }
 
   #error {
@@ -279,7 +286,7 @@ button:active {
   }
 
   #ifmail {
-    width: 100%;
+    width: 28rem;
   }
 
   #ifmail,
@@ -288,8 +295,9 @@ button:active {
   }
 
   button {
-    width: 5rem;
+    width: 7rem;
   }
+
 }
 
 @media screen and (min-width: 100em) {
