@@ -124,7 +124,8 @@ body {
 .store_card_text {
   padding: 3rem 2.5rem;
   display: grid;
-  gap: 3rem;
+  gap: .5rem;
+  margin-top: .75rem;
 }
 
 /* Logo */
@@ -143,7 +144,7 @@ body {
 .store_card_text > h1,
 .dark {
   text-transform: uppercase;
-  font-size: 2.25rem;
+  font-size: 2.4375rem;
   line-height: normal;
   letter-spacing: 0.6875rem;
   font-weight: var(--fw-light);
@@ -152,6 +153,7 @@ body {
 .store_card_text > p {
   font-size: 0.875rem;
   font-weight: var(--fw-regular);
+  margin-bottom: 2rem;
 }
 
 .dark {
@@ -227,6 +229,7 @@ button:active {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  font-size: .6875rem;
 }
 
 /* Media Query */
