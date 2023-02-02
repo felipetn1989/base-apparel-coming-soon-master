@@ -24,11 +24,13 @@
         alt="Base Apparel Logo"
       />
 
-      <img
-        class="hero_mobile"
-        src="images/hero-mobile.jpg"
-        alt="Photo of a girl wearing an orange shirt with her hand next to her face"
-      />
+      <picture class="hero">
+        <source media="(min-width:60em)" srcset="images/hero-desktop.jpg">
+        <img
+          src="images/hero-mobile.jpg"
+          alt="Photo of a girl wearing an orange shirt with her hand next to her face"
+        />
+      </picture>
 
       <div class="store_card_text grid-group">
         <h1>
@@ -60,11 +62,6 @@
           <p id="error_msg">Please provide a valid e-mail</p>
         </form>
       </div>
-      <img
-        src="images/hero-desktop.jpg"
-        alt="Photo of a girl wearing an orange shirt with her hand next to her face"
-        class="hero_desktop"
-      />
     </main>
 
     <footer>

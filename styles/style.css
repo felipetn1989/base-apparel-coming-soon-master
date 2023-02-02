@@ -137,10 +137,6 @@ body {
 
 /* */
 
-.hero_desktop {
-  display: none;
-}
-
 .store_card_text > h1,
 .dark {
   text-transform: uppercase;
@@ -239,7 +235,7 @@ button:active {
     justify-content: center;
     background-image: url(../images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
   }
 
   .store_card {
@@ -250,12 +246,7 @@ button:active {
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     row-gap: 1rem;
-    max-width: 60rem;
     place-content: center;
-  }
-
-  .hero_mobile {
-    display: none;
   }
 
   .logo_image {
@@ -267,13 +258,11 @@ button:active {
   .store_card_text {
     text-align: left;
     grid-area: two;
+
   }
 
-  .hero_desktop {
-    display: block;
+  .hero {
     grid-area: three;
-    min-width: 30rem;
-    min-height: 40rem;
   }
 
   .store_card_text > h1,
